@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Hospital Panamericano</title>
+    </h:head>
+    <h:body>
+           <p:panel header="HOSPITAL PANAMERICANO">      
+             <div align="center">BIENVENIDOS AL HOSPITAL PANAMERICANO</div>
+             <br> 
+             <h>REGISTRO DE USUARIO NUEVO </h>
+             </br>
+           </p:panel>
+       <h:form>
+           <h:panelGrid  columns="3" cellpadding="1" >
+               
+           
+             <p:commandButton value="USUARIO" id="usua" />
+             <p:inputText />
+             <p:outputLabel for="button" value="FECHA NACIMIENTO:" />
+             <p:calendar id="button" value="#{calendarView.date3}" showOn="button" />
+             <p:commandButton value="ESTATURA" id="estatura" />
+             <p:inputText />
+             <br> </br> 
+             <p:commandButton value="CLAVE" id="clave" />
+             <p:inputText />
+             <p:commandButton value="TELEFONO FIJO" id="tel_f" />
+             <p:inputText />
+             <p:commandButton value="PESO" id="peso" />
+             <p:inputText />
+             <br> </br> 
+             <p:commandButton value="REPITA CLAVE" id="cave_r" />
+             <p:inputText />
+             <p:commandButton value="TELEFONO CELULAR" id="tel_c" />
+             <p:inputText />
+             <br> </br> 
+             <p:commandButton value="NOMBRES" id="nom" />
+             <p:inputText />
+             <p:commandButton value="DIRRECION" id="dirrec" />
+             <p:inputText />
+             <br> </br>
+             <p:commandButton value="APELLIDOS" id="apel" />
+             <p:inputText />
+             <p:commandButton value="BARRIO" id="barrio" />
+             <p:inputText />
+             <br> </br>
+             </h:panelGrid>
+             <p:messages autoUpdate="true" />
+             <h:panelGrid columns="5" style="margin-bottom:10px" cellpadding="5">
+                <p:outputLabel for="console" value="TIPO DE DOCUMENTO :" />
+                 <p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:250px">
+                    <f:selectItem itemLabel="CEDULA DE CIUDADANIA" itemValue="CEDULA DE CIUDADANIA" />
+                    <f:selectItem itemLabel="TARJETA DE IDENTIDAD" itemValue="TARJETA DE IDENTIDAD" />
+                    <f:selectItem itemLabel="REGISTRO CIVIL" itemValue="REGISTRO CIVIL" />
+                    <f:selectItem itemLabel="CEDULA EXTRANJERA" itemValue="CEDULA EXTRANJERA" />
+                 </p:selectOneMenu>
+             </h:panelGrid>
+             <p:commandButton value="EMAIL" id="email" />
+             <p:inputText />
+             <br> </br>
+             <p:commandButton value="NUMERO DE DOCUMENTO" id="n_docum" />
+             <p:inputText />
+             <p:commandButton value="EDAD" id="edad" />
+             <p:inputText />
+             <br> </br>
+             <p:commandButton value="SEXO" id="sexo" />
+             <p:selectManyCheckbox id="basic" value="#{checkboxView.selectedConsoles}">
+               <f:selectItem itemLabel="Masculino" itemValue="Masculino" />
+               <f:selectItem itemLabel="Femenino" itemValue="Femenino" />
+              </p:selectManyCheckbox>
+             
+           <br> </br>
+           <br> </br>
+           <center>
+           <p:growl id="growl" life="2000" />     
+           <p:commandButton value="REGISTRARSE" id="REGISTRARSE" update="growl" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+           <p:commandButton value="CANCELAR" id="CANCELAR" update="growl" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+           </center>    
+       </h:form>
+    </h:body>
+</html>
