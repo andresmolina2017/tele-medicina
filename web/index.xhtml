@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"> </link>
+        <title>Hospital Panamericano</title>
+    </h:head>
+     <h:body>
+        <div style="background-image: url(imagen_principal.png);  "> </div>
+        <div id="principal">
+            <div id="encabezado">
+             <div style="border: 2px solid rgb(204, 102, 204);">
+                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                         <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
+                 </p:panel>
+             </div>
+            </div>
+       <h:form>
+         <div id="body2">
+           <p:growl id="growl" life="6000" />  
+           <center> 
+          <h:panelGrid columns="2" cellpadding="20">  
+           <h:panelGrid columns="1"  cellpadding="20"> 
+             <p:panel>
+             <h:outputText value="CUIDA TU SALUD ....NOOSTROS TE AYUDAMOS " />
+             </p:panel>
+           </h:panelGrid>
+            <h:panelGrid columns="3"  cellpadding="20">                   
+              <h:outputLabel for="pwd1" value="USUARIO: *" />
+              <p:password id="pwd1" value=""  label="usuario" required="true" />
+              <p:commandButton value="INGRESAR" id="ingresar" update="growl" styleClass="ui-priority-primary" />
+       
+              <h:outputLabel for="pwd2" value="CLAVE: *" />
+              <p:password id="pwd2" value="" label="clave" required="true" />
+              <p:commandButton value="REGISTRARSE" id="registrarse" update="growl" actionListener="#{buttonView.buttonAction}" styleClass="ui-priority-primary" />
+            </h:panelGrid>
+          </h:panelGrid>
+           </center> 
+         </div>  
+       </h:form>    
+        </div>   
+     </h:body>
+</html>

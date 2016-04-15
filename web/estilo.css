@@ -1,0 +1,31 @@
+body {
+}
+#encabezado{
+  margin:auto;
+  width:100%;
+  height:10%;
+  background-color: #44CBFC;
+  
+}
+#principal{
+  margin:auto;
+  margin-top:0%;
+  width:100%;
+  height:100%;
+}
+
+#body{
+  margin:auto;
+  margin-top:5%;
+  width:95%;
+  height:85%;
+  background-image: url("imagenes/imagen_principal.png");  
+}
+#body2{
+  margin:auto;
+  margin-top:20%;
+  width:95%;
+  height:85%;
+  background-image: url("imagenes/imagen_principal.png");  
+}
+        
