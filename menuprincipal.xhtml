@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"> </link>
+        <title>Hospital Panamericano</title>
+    </h:head>
+     <h:body>
+        
+        <div style="background-image: url(imagen_principal.png);  "> </div>
+        <div id="principal">
+            <div id="encabezado">
+             <div style="border: 2px solid rgb(204, 102, 204);">
+                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                         <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
+                 </p:panel>
+             </div>
+            </div>
+            <h:form>
+              <div id="body3">
+                  
+                  <center>
+                      <img src="imagen_principal.png" width="600" height="400"></img>
+                <h:panelGrid columns="5"  cellpadding="30"> 
+                     
+                     <p:commandButton  value="CITAS MEDICAS"  styleClass="ui-priority-primary" />     
+                     <p:commandButton  value="SALUD DIARIA "  styleClass="ui-priority-primary" /> 
+                     <p:commandButton  value="CERRAR SESION "  styleClass="ui-priority-primary" />
+                     <p:commandButton  value="ENVIAR RESULTADOS "  styleClass="ui-priority-primary" />
+                     <p:commandButton  value="SERVICIO DE AMBULACIA "  styleClass="ui-priority-primary" />
+                    
+                </h:panelGrid>
+                 </center>
+              </div>
+            </h:form>
+        </div>   
+     </h:body>
+</html>
+
