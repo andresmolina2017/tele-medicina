@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"> </link>
+        <title>Hospital Panamericano</title>
+    </h:head>
+     <h:body>
+        <div style="background-image: url(imagen_principal.png);  "> </div>
+        <div id="principal">
+            <div id="encabezado">
+             <div style="border: 2px solid rgb(204, 102, 204);">
+                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                         <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
+                 </p:panel>
+             </div>
+            </div>
+       <h:form>
+         <div id="body2">
+            
+           <center> 
+          <h:panelGrid columns="3" cellpadding="10">  
+           <h:panelGrid columns="1"  cellpadding="5"> 
+             <p:panel>
+             <h:outputText  value="CUIDA TU SALUD ....NOSOTROS TE AYUDAMOS " />
+             </p:panel>
+           </h:panelGrid>
+          <p:panel id="panel" header="LOGIN...."> 
+              <p:messages id="msgs" />
+            <h:panelGrid columns="2"  cellpadding="10">   
+              <p:outputLabel for="usuario" value="USUARIO: " />
+              <p:inputText id="usuario" value="#{login.usuario}" required="true" label="usuario"  >
+                  <f:validateLength minimum="2" />
+              </p:inputText>
+              
+              <p:outputLabel for="clave" value="CLAVE:" />
+               <p:inputText id="clave" value="#{login.clave}"  label="clave" required="true" >
+                  <f:validateLength minimum="2" />
+                  <p:ajax update="msgCLAVE" event="keyup" />
+               </p:inputText>
+              <p:message for="usuario" display="icon" />
+              <p:message for="clave" id="msgCLAVE" display="icon" />
+              </h:panelGrid>
+               </p:panel> 
+               <h:panelGrid columns="1"  cellpadding="5"> 
+                  <p:commandButton  value="REGISTRARSE" actionListener="#{login.REGISTRARSE()}" styleClass="ui-priority-primary" />
+                  <p:commandButton value="INGRESAR" update="panel"  actionListener="#{login.INGRESAR()}" icon="ui-icon-check" />
+             </h:panelGrid>
+            
+            
+          </h:panelGrid>
+           </center> 
+         </div>  
+       </h:form>    
+        </div>   
+     </h:body>
+</html>
+            
+ 
+         
+ 
+   
