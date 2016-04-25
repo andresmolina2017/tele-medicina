@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"> </link>
+        <title>Hospital Panamericano</title>
+    </h:head>
+     <h:body>
+         <div style="background-image: url(imagen_principal.png);  "> </div>
+        <div id="principal">
+            <div id="encabezado">
+             <div style="border: 2px solid rgb(204, 102, 204);">
+                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                         <div align="center"><H1>BIENVENIDO REGISTRA TUS DATOS</H1> </div>
+                 </p:panel>
+             </div>
+            </div>
+         <div id="body">
+            <h:form>
+               <h:panelGrid  columns="3" cellpadding="40" >
+                    
+                 <h:panelGrid  columns="2"  cellpadding="15" >
+                   <p:outputLabel  for="button" value="USUARIO:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="CLAVE:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="REPITA CLAVE:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="NOMBRES:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="APELLIDOS:" />
+                   <p:inputText /> 
+                   <p:outputLabel for="console" value="TIPO DE DOCUMENTO :" />
+                   <p:selectOneMenu id="console" value="#{registro.console}" style="width:250px">
+                         <f:selectItem itemLabel="CEDULA DE CIUDADANIA" itemValue="CEDULA DE CIUDADANIA" />
+                         <f:selectItem itemLabel="TARJETA DE IDENTIDAD" itemValue="TARJETA DE IDENTIDAD" />
+                         <f:selectItem itemLabel="REGISTRO CIVIL" itemValue="REGISTRO CIVIL" />
+                         <f:selectItem itemLabel="CEDULA EXTRANJERA" itemValue="CEDULA EXTRANJERA" />
+                     </p:selectOneMenu>    
+                   <p:outputLabel for="button" value="NUMERO DE DOCUMENTO:" />
+                   <p:inputText /> 
+                 </h:panelGrid>
+                    
+                 <h:panelGrid  columns="2"  cellpadding="15" >
+                   <p:outputLabel for="button" value="FECHA NACIMIENTO:" />
+                   <p:calendar id="button" value="#{calendarView.date3}" showOn="button" />
+                   <p:outputLabel for="button" value="TELEFONO FIJO:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="TELEFONO CELULAR" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="DIRECCION:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="BARRIO:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="EMAIL:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="EDAD:" />
+                   <p:inputText />
+                 </h:panelGrid>
+                   
+                 <h:panelGrid  columns="2" cellpadding="15" > 
+                   <p:outputLabel for="button" value="ESTATURA:" />
+                   <p:inputText />
+                   <p:outputLabel for="button" value="PESO:" />
+                   <p:inputText />           
+                   <p:outputLabel for="button" value="GENERO:" />
+                     <p:selectManyCheckbox id="basic" value="#{checkboxView.selectedConsoles}">
+                     <f:selectItem itemLabel="Masculino" itemValue="Masculino" />
+                     <f:selectItem itemLabel="Femenino" itemValue="Femenino" />
+                     </p:selectManyCheckbox>   
+                 </h:panelGrid>
+              
+               </h:panelGrid>
+             <center> 
+                 <br> </br>
+                 <br> </br>
+                 <br> </br>
+               <p:growl id="growl" life="2000" />     
+               <p:commandButton value="CONFIRMAR" ajax="false"  styleClass="ui-icon-check" action="#{Registro.Confirmar()}" />
+               <p:commandButton value="CANCELAR"  ajax="false"  action="#{registro.Cancelar()}" styleClass="ui-icon-check" />
+             </center>    
+            </h:form>
+         </div>   
+        </div> 
+        
+     </h:body>
+</html>
+
+

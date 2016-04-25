@@ -1,0 +1,55 @@
+body {
+    background-image: url(images/imagen_principal.png);
+}
+#encabezado{
+  margin:auto;
+  width:100%;
+  height:10%;
+  background-color: #44CBFC;
+  
+}
+#img{
+  width:100%;
+  height:100%;
+  
+}
+#principal{
+  margin:auto;
+  margin-top:0%;
+  width:100%;
+  height:100%;
+}
+
+#body{
+  margin:auto;
+  margin-top:5%;
+  width:95%;
+  height:85%;
+   
+}
+#body1{
+  margin:auto;
+  margin-top:20%;
+  width:85%;
+  height:50%;
+  background-color: red;
+}
+#body2{
+  margin:auto;
+  margin-top:20%;
+  width:95%;
+  height:85%; 
+      
+}
+
+#body3{
+  margin:auto;
+  margin-top:10%;
+  width:65%;
+  height:65%; 
+} 
+#body4{
+  margin:auto;
+  width:100%;
+  height:85%; 
+}

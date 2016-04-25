@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"> </link>
+        <title>Hospital Panamericano</title>
+    </h:head>
+      <h:body>
+       <div style="background-image: url(imagen_principal.png);  "> </div>
+        <div id="principal">
+            <div id="encabezado">
+             <div style="border: 2px solid rgb(204, 102, 204);">
+                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                         <div align="center"><H1>MODULO DE CITAS MEDICAS</H1> </div>
+                 </p:panel>
+             </div>
+            </div>
+         <h:form>
+             <center>
+          <div id="body4"> 
+            <p:panel style="width:95%" id="panel" header="">
+           <h:panelGrid columns="4" cellpadding="10">  
+               
+             <h:panelGrid columns="1"  cellpadding="10">  
+               <p:outputLabel for="ndecita" value="NUMERO DE CITA: " />
+               <p:inputText id="ndecita" value="#{citas.ndcita}" required="true" label="ndecita"  >
+                  <f:validateLength minimum="6" />
+               </p:inputText>
+               <p:outputLabel for="console" value="TIPO DE DOCUMENTO :" />
+                     <p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:250px">
+                         <f:selectItem itemLabel="CEDULA DE CIUDADANIA" itemValue="CEDULA DE CIUDADANIA" />
+                         <f:selectItem itemLabel="TARJETA DE IDENTIDAD" itemValue="TARJETA DE IDENTIDAD" />
+                         <f:selectItem itemLabel="REGISTRO CIVIL" itemValue="REGISTRO CIVIL" />
+                         <f:selectItem itemLabel="CEDULA EXTRANJERA" itemValue="CEDULA EXTRANJERA" />
+                     </p:selectOneMenu>    
+               <p:outputLabel for="nddocumento" value="NUMERO :" />
+               <p:inputText id="nddocumento"  value="#{citas.nddocumento}" required="true" label="nddocumento"  >
+                       <f:validateLength minimum="6"/>
+               </p:inputText>   
+                <BR></BR>
+               <p:commandButton value="AGREGAR CITA MEDICA"   actionListener="#{citas.AGREGAR()}" icon="ui-icon-check" />  
+             </h:panelGrid>
+       
+             <h:panelGrid columns="1"  cellpadding="10">  
+               <p:outputLabel for="nombre" value="NOMBRES: " style="font-weight:bold" />
+               <p:inputText id="nombre" value="#{citas.nombre}" required="true" label="NOMBRES:"  >
+                      <f:validateLength minimum="6"/>     
+               </p:inputText>
+               
+               
+               
+               <p:outputLabel for="apellido" value="APELLIDOS :" />
+               <p:inputText id="apellido"  value="#{citas.apellido}" required="true" label="apellido"  >
+                   <f:validateLength minimum="6"/>     
+               </p:inputText>
+               <p:outputLabel for="button" value="FECHA NACIMIENTO:" />
+               <p:calendar id="button" value="#{calendarView.date3}" showOn="button" />
+                <BR></BR>
+               <p:commandButton value="MODIFICAR CITA MEDICA" ajax="false" icon="ui-icon-check" validateClient="true" style="margin-right:10px"/>  
+                
+               </h:panelGrid> 
+     
+             <h:panelGrid columns="1"  cellpadding="10">  
+               <p:outputLabel for="horainicial" value="HORARIO INICIAL: " />
+               <p:inputText id="horainicial" value="#{citas.nombre}" required="true" label="horainicial"  >
+                  <f:validateLength minimum="2" />
+               </p:inputText>
+               <p:outputLabel for="horafinal" value="HORARIO FINAL :" />
+               <p:inputText id="horafinal"  value="#{citas.apellido}" required="true" label="horafinal"  >
+                   <f:validateLength minimum="6"/>    
+               </p:inputText>
+               <p:outputLabel for="console2" value="TIPO DE CITA :" />
+                     <p:selectOneMenu id="console2" value="#{selectOneMenuView.console2}" style="width:250px">
+                         <f:selectItem itemLabel="ODONTOLOGICA " itemValue="ODONTOLOGICA " />
+                         <f:selectItem itemLabel="MEDICINA GENERAL" itemValue="MEDICINA GENERAL" />
+                         <f:selectItem itemLabel="PRIORITARIA" itemValue="PRIORITARIA" />
+                         <f:selectItem itemLabel="ESPECIALIDAD" itemValue="ESPECIALIDAD" />
+                     </p:selectOneMenu>  
+                 <BR></BR>
+               <p:commandButton value="CONSULTAR CITA MEDICA"   actionListener="#{citas.MODIFICAR()}" icon="ui-icon-check" />  
+             </h:panelGrid> 
+               
+             <h:panelGrid columns="1"  cellpadding="10">  
+               <p:outputLabel for="console3" value="AREA DE CITA :" />
+                     <p:selectOneMenu id="console3" value="#{selectOneMenuView.console3}" style="width:250px">
+                         <f:selectItem itemLabel="URGENCIAS" itemValue="URGENCIAS" />
+                         <f:selectItem itemLabel="MEDICINA GENERAL" itemValue="MEDICINA GENERAL" />
+                         <f:selectItem itemLabel="FISOTERAPIAS" itemValue="FISOTERAPIAS" />
+                         <f:selectItem itemLabel="ESPECIALIDAD" itemValue="ESPECIALIDAD" />
+                     </p:selectOneMenu>     
+               <p:outputLabel for="console4" value="MEDICO :" />
+                     <p:selectOneMenu id="console4" value="#{selectOneMenuView.console4}" style="width:250px">
+                         <f:selectItem itemLabel="JUAN C MOLINA" itemValue="JUAN C MOLINA" />
+                         <f:selectItem itemLabel="ANDRES FONSECA" itemValue="ANDRES FONSECA" />
+                         <f:selectItem itemLabel="ESCARLET JOHANSSON" itemValue="ESCARLET JOHANSSON" />
+                     </p:selectOneMenu>
+               <p:outputLabel for="console5" value="CENTRO MEDICO :" />
+                     <p:selectOneMenu id="console5" value="#{selectOneMenuView.console5}" style="width:250px">
+                         <f:selectItem itemLabel="AV 1 DE MAYO" itemValue="AV 1 DE MAYO" />
+                         <f:selectItem itemLabel="FERIAS" itemValue="FERIAS" />
+                         <f:selectItem itemLabel="CHICO" itemValue="CHICO" />
+                         <f:selectItem itemLabel="CHAPINERO" itemValue="CHAPINERO" />
+                         <f:selectItem itemLabel="COLINA" itemValue="COLINA" />
+                     </p:selectOneMenu> 
+               <BR></BR>
+               <p:commandButton value="CANCELAR CITA MEDICA"   actionListener="#{citas.CANCELAR()}" icon="" /> 
+             </h:panelGrid>
+           </h:panelGrid>
+           </p:panel>
+          </div> 
+           <BR></BR><BR></BR><BR></BR>  
+           <p:panel style="height:50%"   id="panel" header="DATOS...."></p:panel>
+            </center>
+         </h:form>    
+            
+        </div>
+     </h:body>
+</html>
+
