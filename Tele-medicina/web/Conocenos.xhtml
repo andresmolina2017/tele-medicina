@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <<h:head>   
+    <h:head>   
         <link href="estilos/estilo.css" rel="stylesheet" type="text/css"> </link>
         <title>Hospital Panamericano</title>
     </h:head>
@@ -19,7 +19,51 @@
             </div>
         </div>
        <h:form>
+           <center>
+          <p:panel id="basic" header="Marco Teorico"  style="margin-bottom:20px">
+         <h:panelGrid columns="2" cellpadding="10"> 
+           <h:panelGrid columns="1" cellpadding="10">   
+         <p:galleria value="#{multimedia.images}" var="image" panelWidth="600" panelHeight="600" showCaption="true">
+         <p:graphicImage name="imags/hospital/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+         </p:galleria>
+           </h:panelGrid>
+           
+             <h:panelGrid columns="1" cellpadding="10">
+               <p:graphicImage name="imags/imagen_principal.png" />
+               <H2>HISTORIA...</H2> 
+               
+               <h:outputText
+                value="Hospital Unipanmericano es la empresa de la Tele-Medicina creada en 1995, como respuesta al Sistema de Seguridad Social en Salud,
+                      para garantizar la atención del Plan Obligatorio de Salud (POS - Ley 100 de 1993)." />
+              
+               <h:outputText 
+                value="Para la prestación de estos servicios contemplados en el POS, contamos con una extensa red de médicos adscritos, tecnología e infraestructura
+                       que conforman su Cuadro Médico distribuidos en todo el territorio nacional.
+                       Las dudas que tenga, consúltelas de inmediato en nuestras Oficinas a nivel nacional o en la sección Contáctenos." />
+               
+               <H3>¿Que ofrecemos?...</H3>
+               
+               <h:outputText 
+                value="Hospital Unipanmericano ofrece los servicios médico-asistenciales contemplados en el Plan Obligatorio de Salud de conformidad con lo señalado
+                      en las normas legales vigentes sobre la materia. Estos  servicios incluyen un conjunto de acciones de prevención de la enfermedad y de recuperación 
+                      de la salud desde la medicina preventiva básica hasta diversos tratamientos de alta complejidad, entre ellos:" />
+	
+               <h:outputText value="* Consulta: medicina general y especializada." />
+	       <h:outputText value="* Odontología: con excepción de ortodoncia, periodoncia y prótesis." />
+	       <h:outputText value="* Acciones de promoción de la salud y prevención de la enfermedad." />
+	       <h:outputText value="* Atención inicial de urgencias." />
+	       <h:outputText value="* Diagnóstico: laboratorio clínico, radiología, ecografías, medicina nuclear,resonancia electromagnética y escenografía."/>
+	       <h:outputText value="* Hospitalización." />
+	       <h:outputText value="* Tratamientos quirúrgicos, en servicios de baja, mediana y alta complejidad." />
+	       <h:outputText value="* Apoyo terapéutico: terapia física, respiratoria, ocupacional y del lenguaje." />
+	       <h:outputText value="* Suministro de medicamentos." />
+	       <h:outputText value="* Trámite de incapacidades y licencias." />
              
+             
+             </h:panelGrid>
+          </h:panelGrid>
+            </p:panel>
+           </center>    
        </h:form>
      </h:body>
 </html>
