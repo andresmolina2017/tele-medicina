@@ -45,14 +45,33 @@
                </p:inputText>
               <p:message for="usuario" display="icon" />
               <p:message for="clave" id="msgCLAVE" display="icon" />
+              <p:commandLink id="recuperacion"  action="#{login.Recuperacion()}">
+                <h:outputText value="OLVIDASTE LA CONTRASEÑA" />
+              </p:commandLink>
               </h:panelGrid>
                </p:panel> 
                <h:panelGrid columns="1"  cellpadding="5"> 
                    <p:commandButton  ajax="false" update="body" value="REGISTRARSE"   icon="ui-icon-check" action="#{login.Menu()}">     
                    </p:commandButton>
                    <p:commandButton value="INGRESAR" update="panel"  icon="ui-icon-check" action="#{login.Menup()}" />
-             </h:panelGrid>  
+             </h:panelGrid>
+              
           </h:panelGrid>
+               <br></br> <br></br> <br></br>
+             <h:panelGrid columns="4"  cellpadding="10"> 
+               <p:commandLink id="CONOCENOS"  action="#{login.Conocenos()}">
+                <h:outputText value="CONOCENOS" />
+               </p:commandLink>
+               <p:commandLink id="VISION"  action="#{login.Conocenos()}">
+                <h:outputText value="VISION" />
+               </p:commandLink>
+               <p:commandLink id="MISION"  action="#{login.Conocenos()}">
+                <h:outputText value="MISION" />
+               </p:commandLink>
+               <p:commandLink id="UBICACION"  action="#{login.Conocenos()}">
+                <h:outputText value="UBICACION" />
+               </p:commandLink>  
+             </h:panelGrid>
            </center> 
          </div> 
             
