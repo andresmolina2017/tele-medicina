@@ -10,65 +10,66 @@
         <link href="estilos/estilo.css" rel="stylesheet" type="text/css"> </link>
         <title>Hospital Panamericano</title>
     </h:head>
-     <h:body>
-        <div id="principal"  >
+    <div id="principal"  >
            
             <div id="encabezado">
              <div style="border: 2px solid rgb(204, 102, 204);">
-                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                 <p:panel style="background-color: #2E9AFE;" header="HOSPITAL UNIPANAMERICANO">
                          <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
                  </p:panel>
              </div>
             </div>
-       <h:form>
-         
+     </div>
+     <h:body >
+        
+       <h:form>     
          <div id="body3">
            <center> 
           <h:panelGrid columns="3" cellpadding="10">  
            <h:panelGrid columns="1"  cellpadding="5"> 
              <p:panel>
-             <h:outputText  value="CUIDA TU SALUD ....NOSOTROS TE AYUDAMOS " />
+             <h:outputText style="font-weight:bold" value="CUIDA TU SALUD ....NOSOTROS TE AYUDAMOS " />
              </p:panel>
            </h:panelGrid>
           <p:panel id="panel" header="LOGIN...."> 
               <p:messages id="msgs" />
             <h:panelGrid columns="2"  cellpadding="10">   
-              <p:outputLabel for="usuario" value="USUARIO: " />
-              <p:inputText id="usuario" value="#{login.usuario}" required="true" label="usuario"  >
+              <p:outputLabel for="usuario" value="USUARIO: " style="font-weight:bold" />
+              <p:inputText id="usuario" value="#{login.usuario.nick}"  required="true" label="usuario"  >
                   <f:validateLength minimum="2" />
               </p:inputText>
               
-              <p:outputLabel for="clave" value="CLAVE:" />
-               <p:inputText id="clave" value="#{login.clave}"  label="clave" required="true" >
+              <p:outputLabel for="clave" value="CLAVE:"  style="font-weight:bold" />
+              <p:inputText id="clave" value="#{login.usuario.clave}" style="font-weight:bold" label="clave" required="true" >
                   <f:validateLength minimum="6" />
                   <p:ajax update="msgCLAVE" event="keyup" />
                </p:inputText>
               <p:message for="usuario" display="icon" />
               <p:message for="clave" id="msgCLAVE" display="icon" />
-              <p:commandLink id="recuperacion"  action="#{login.Recuperacion()}">
+              <p:commandLink id="recuperacion" style="font-weight:bold" action="#{login.Recuperacion()}">
                 <h:outputText value="OLVIDASTE LA CONTRASEÑA" />
               </p:commandLink>
               </h:panelGrid>
                </p:panel> 
                <h:panelGrid columns="1"  cellpadding="5"> 
-                   <p:commandButton  ajax="false" update="body" value="REGISTRARSE"   icon="ui-icon-check" action="#{login.Menu()}">     
+                   <p:commandButton immediate="true" ajax="false" update="body" style="font-weight:bold" value="REGISTRARSE"  action="#{login.Menu()}">     
                    </p:commandButton>
-                   <p:commandButton value="INGRESAR" update="panel"  icon="ui-icon-check" action="#{login.Menup()}" />
+                   <p:commandButton value="INGRESAR" update="panel" style="font-weight:bold" icon="ui-icon-check" action="#{login.Menup()}" />
              </h:panelGrid>
               
           </h:panelGrid>
                <br></br> <br></br> <br></br>
              <h:panelGrid columns="4"  cellpadding="10"> 
-               <p:commandLink id="CONOCENOS"  action="#{login.Conocenos()}">
+                 <p:commandLink immediate="true" id="CONOCENOS" style="font-weight:bold"  action="#{login.Conocenos()}">
                 <h:outputText value="CONOCENOS" />
                </p:commandLink>
-               <p:commandLink id="VISION"  action="#{login.Conocenos()}">
+               <p:commandLink immediate="true" id="VISION" style="font-weight:bold" action="#{login.Conocenos()}">
                 <h:outputText value="VISION" />
                </p:commandLink>
-               <p:commandLink id="MISION"  action="#{login.Conocenos()}">
+               <p:commandLink immediate="true" id="MISION" style="font-weight:bold" action="#{login.Conocenos()}">
                 <h:outputText value="MISION" />
                </p:commandLink>
-               <p:commandLink id="UBICACION"  action="#{login.Conocenos()}">
+               <p:commandLink immediate="true" id="UBICACION" style="font-weight:bold" action="#{login.Conocenos()}">
                 <h:outputText value="UBICACION" />
                </p:commandLink>  
              </h:panelGrid>
@@ -76,7 +77,7 @@
          </div> 
             
        </h:form>    
-        </div>
+       
          
      </h:body>
 </html>

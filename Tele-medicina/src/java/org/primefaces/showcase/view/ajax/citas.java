@@ -87,11 +87,11 @@ public class citas {
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(" CONSULTA DE SU CITA "));
      }
-     public void CANCELAR() {
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(" HA CANCELADO SU CITA "));
+     
+    
+     public String CANCELAR() {
+     return "Logout.xhtml"; 
+   
      }
-    public citas() {
-    }
     
 }

@@ -13,26 +13,36 @@
            
             <div id="encabezado">
              <div style="border: 2px solid rgb(204, 102, 204);">
-                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                 <p:panel style="background-color: #2E9AFE;" header="HOSPITAL UNIPANAMERICANO">
                          <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
                  </p:panel>
              </div>
             </div>
           <h:form>
          <div id="body3">
-           <center> 
-          <p:panel id="panel" header="Recuperacion...."> 
-           <h:panelGrid columns="3" cellpadding="10">
-            <p:outputLabel for="email" value="EMAIL: " />
-            <p:inputText id="email" value="#{login.email}" required="true" label="email"  >
+          <p:panel id="panel" header="Recuperacion....">  
+          <p:layoutUnit position="center" > 
+            <p:panel id="panelIndexPrincipal"  style="text-align: center">
+                <h:panelGrid columns="1" cellpadding="5" width="100%">   
+                <img width="40%" src="imags/correo.png" all=""/>
+                </h:panelGrid>
+            
+               <h:panelGrid columns="3" cellpadding="10">
+                  
+                <p:outputLabel for="email" value="EMAIL: " style="font-weight:bold"  />
+                <p:inputText id="email" value="#{login.email}" required="true" label="email"  >
                   <f:validateLength minimum="12" />
-            </p:inputText>
-            <p:commandButton value="ENVIAR" update="panel"  icon="ui-icon-check" actionListener="#{login.Email()}" />
-           </h:panelGrid> 
+                </p:inputText>
+                <p:commandButton value="ENVIAR" update="panel" style="font-weight:bold"  actionListener="#{login.Email()}" />
+                            
+               </h:panelGrid> 
+            </p:panel>
+   
+          </p:layoutUnit>
           </p:panel>
-           </center>
          </div>
           </h:form>
+         
         </div>
      </h:body>
 </html>

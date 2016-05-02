@@ -2,20 +2,33 @@
 package org.primefaces.showcase.view.ajax;
  
 import static com.sun.javafx.logging.PulseLogger.addMessage;
+import entidades.UsuarioVO;
 import javafx.event.ActionEvent;
+import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import negocio.AutentificacionBeanLocal;
 
 
 
 @ManagedBean
 
 public class login {
-    private String usuario;
-    private String clave;
+    private UsuarioVO usuario = new UsuarioVO();
     private String email;
+    
+    @EJB
+    private AutentificacionBeanLocal auteticarBean;
 
+    public UsuarioVO getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioVO usuario) {
+        this.usuario = usuario;
+    }
+    
     public String getEmail() {
         return email;
     }
@@ -24,23 +37,6 @@ public class login {
         this.email = email;
     }
     
-    
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
- 
      public void INGRESAR() {
         
     } 
@@ -52,7 +48,19 @@ public class login {
         return "Registro.xhtml";    
      }
      public String Menup(){
-         return "Menuprincipal.xhtml";
+         
+         //Llamar al EJB de autenticacion
+         
+         if(auteticarBean.autentificar(usuario))
+            return "Menuprincipal.xhtml";
+         else
+             return "";
+         
+         
+         
+         
+         
+         
      }
      public String Index(){
          return "Index.xhtml";

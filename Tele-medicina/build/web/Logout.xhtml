@@ -12,18 +12,29 @@
             
             <div id="encabezado">
              <div style="border: 2px solid rgb(204, 102, 204);">
-                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                 <p:panel style="background-color: #2E9AFE;" header="HOSPITAL UNIPANAMERICANO">
                          <div align="center"><H1>GRACIAS POR UTILIZAR NUESTROS SERVICIOS</H1> </div>
                  </p:panel>
              </div>
             </div>
         </div>
         <h:form>
-            
             <div id="body4">
-            <img src="imags/imagen_principal.png"> 
-            <p:commandButton value="VOLVER A PAGINA PRINCIPAL"  icon="ui-icon-check" action="#{login.Index()}" />
-            </img> 
+            <p:layoutUnit position="center" style="background-color: limegreen">
+                    <p:panel id="panelIndexPrincipal"  style="text-align: center">
+                       
+                            <h:panelGrid columns="1" cellpadding="5" width="100%" >
+
+                                <img width="50%" src="imags/imagen_principal.png" alt=""/>
+
+                            </h:panelGrid>
+                      
+                    </p:panel>
+                <center>
+                <p:commandButton value="VOLVER A PAGINA PRINCIPAL" style="font-weight:bold" icon="ui-icon-check" action="#{login.Index()}" />
+                </center>        
+            </p:layoutUnit>
+   
             </div>
        </h:form>
        

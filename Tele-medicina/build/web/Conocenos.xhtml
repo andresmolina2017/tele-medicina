@@ -12,7 +12,7 @@
            
             <div id="encabezado">
              <div style="border: 2px solid rgb(204, 102, 204);">
-                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                 <p:panel style="background-color: #2E9AFE;" header="HOSPITAL UNIPANAMERICANO">
                          <div align="center"><H1>BIENVENIDO AL HOSPITAL UNIPANMERICANO</H1> </div>
                  </p:panel>
              </div>
@@ -21,15 +21,14 @@
        <h:form>
            <center>
           <p:panel id="basic" header="Marco Teorico"  style="margin-bottom:20px">
-         <h:panelGrid columns="2" cellpadding="10"> 
-           <h:panelGrid columns="1" cellpadding="10">   
-         <p:galleria value="#{multimedia.images}" var="image" panelWidth="600" panelHeight="600" showCaption="true">
-         <p:graphicImage name="imags/hospital/#{image}" alt="Image Description for #{image}" title="#{image}"/>
-         </p:galleria>
+         <h:panelGrid columns="2" cellpadding="10" width="100%" > 
+             
+           <h:panelGrid   columns="1" cellpadding="10" width="100%" >    
+               <img position="center" width="100%"  height="70%" src="imags/hospital.png" alt=""/>
            </h:panelGrid>
            
-             <h:panelGrid columns="1" cellpadding="10">
-               <p:graphicImage name="imags/imagen_principal.png" />
+             <h:panelGrid columns="1" cellpadding="10" width="100%">
+              
                <H2>HISTORIA...</H2> 
                
                <h:outputText
@@ -59,7 +58,7 @@
 	       <h:outputText value="* Suministro de medicamentos." />
 	       <h:outputText value="* Trámite de incapacidades y licencias." />
              
-             
+               <p:commandButton value="REGRESAR " action="#{login.Index()}" style="font-weight:bold" />
              </h:panelGrid>
           </h:panelGrid>
             </p:panel>

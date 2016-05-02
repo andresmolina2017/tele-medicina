@@ -12,25 +12,30 @@
         <div id="principal">
             <div id="encabezado">
              <div style="border: 2px solid rgb(204, 102, 204);">
-                 <p:panel style="background-color: #44CBFC;" header="HOSPITAL UNIPANAMERICANO">
+                 <p:panel style="background-color: #2E9AFE;" header="HOSPITAL UNIPANAMERICANO">
                          <div align="center"><H1>MENU PRINCIPAL</H1> </div>
                  </p:panel>
              </div>
             </div>
             <h:form>
+                
               <div id="body3">
-                  
-                  <center>
-                      <img src="imagen_principal.png" width="600" height="400"></img>
-                <h:panelGrid columns="5"  cellpadding="30"> 
-                     
+                <p:layoutUnit position="center" style="background-color: limegreen"> 
+                 <p:panel id="panelIndexPrincipal"  style="text-align: center">
+                     <h:panelGrid columns="1" cellpadding="5" width="100%">   
+                     <img width="40%" src="imags/imagen_principal.png" all=""/>
+                     </h:panelGrid>
+                   
+                 <h:panelGrid columns="5"  cellpadding="20" width="100%" >     
                   <p:commandButton  ajax="false" value="CITAS MEDICAS"  styleClass="ui-icon-check" action="#{menuPrincipal.Citas()}" /> 
                   <p:commandButton  ajax="false" value="SALUD DIARIA "  styleClass="ui-icon-check" action="#{menuPrincipal.Salud()}" />  
                   <p:commandButton  ajax="false" value="CERRAR SESION  "  styleClass="ui-icon-check" action="#{menuPrincipal.Cancelar()}" />
                   <p:commandButton  ajax="false" value=" ENVIAR RESULTADOS"  styleClass="ui-icon-check" action="#{menuPrincipal.Resultados()}" />
-                  <p:commandButton  ajax="false" value="SERVICIO DE AMBULACIA"  styleClass="ui-icon-check" action="#{menuPrincipal.Ambulancia()}" />               
-                </h:panelGrid>
-                 </center>
+                  <p:commandButton  ajax="false" value="SERVICIO DE AMBULACIA"  styleClass="ui-icon-check" action="#{menuPrincipal.Ambulancia()}" />                  
+                 </h:panelGrid>
+                     
+                 </p:panel>
+                </p:layoutUnit>
               </div>
             </h:form>
         </div>   
