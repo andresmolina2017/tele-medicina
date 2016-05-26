@@ -74,5 +74,9 @@ public class registro {
       public String Cancelar(){
          return "Logout.xhtml";
       }
+      
+      public String registro(){
+          return "exitoso";
+      }
     }
 
