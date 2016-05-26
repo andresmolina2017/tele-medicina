@@ -2,7 +2,7 @@
 package org.primefaces.showcase.view.ajax;
  
 import static com.sun.javafx.logging.PulseLogger.addMessage;
-import entidades.UsuarioVO;
+import entidades.usuarioVO;
 import javafx.event.ActionEvent;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
@@ -15,17 +15,17 @@ import negocio.AutentificacionBeanLocal;
 @ManagedBean
 
 public class login {
-    private UsuarioVO usuario = new UsuarioVO();
+    private usuarioVO usuario = new usuarioVO();
     private String email;
     
     @EJB
     private AutentificacionBeanLocal auteticarBean;
 
-    public UsuarioVO getUsuario() {
+    public usuarioVO getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(UsuarioVO usuario) {
+    public void setUsuario(usuarioVO usuario) {
         this.usuario = usuario;
     }
     
