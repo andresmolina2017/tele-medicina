@@ -1,3 +1,4 @@
+
 package negocio;
 
 import entidades.usuarioVO;
@@ -5,25 +6,23 @@ import javax.ejb.Stateless;
 
 
 @Stateless
-public class AutentificacionBean implements AutentificacionBeanLocal {
-
+public class RecuperarContrasenaBean implements RecuperarContrasenaBeanLocal {
+    
     @Override
-    public boolean autentificar(usuarioVO usuario) {
-        System.out.println("Hola desde autentucar");
+    public boolean recuperar(usuarioVO email) {
+        System.out.println("Hola desde recuperar");
 
         return true;
 
     }
 
     @Override
-    public String obtenerNombreUsuario() {
+    public String recuperarContrasena() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    public boolean autenticar(usuarioVO usurario) {
-        return false;
-
+    
     }
     
-}
+
+    
 
