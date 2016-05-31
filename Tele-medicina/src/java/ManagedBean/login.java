@@ -2,6 +2,7 @@
 package ManagedBean;
  
 import static com.sun.javafx.logging.PulseLogger.addMessage;
+import entidades.autentificacion;
 import entidades.usuarioVO;
 import javafx.event.ActionEvent;
 import javax.ejb.EJB;
@@ -9,17 +10,21 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import negocio.AutentificacionBeanLocal;
+import static relacionBD.Pacientes_.usuario;
 
 
 
-@ManagedBean
+@ManagedBean(name = "creacionUsuarioMB")
 
 public class login {
-    private usuarioVO usuario = new usuarioVO();
-    private String email;
     
     @EJB
     private AutentificacionBeanLocal auteticarBean;
+    
+    private usuarioVO usuario = new usuarioVO();
+    private String email;
+    private autentificacion a;
+    
 
     public usuarioVO getUsuario() {
         return usuario;
@@ -51,10 +56,10 @@ public class login {
          
          //Llamar al EJB de autenticacion
          
-         if(auteticarBean.autentificar(usuario))
+       // if(auteticarBean.autentificar(a))
             return "Menuprincipal.xhtml";
-         else
-             return "";  
+         //else
+           //  return "";  
          
      }
      public String Index(){

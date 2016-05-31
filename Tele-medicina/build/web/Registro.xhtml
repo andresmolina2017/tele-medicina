@@ -25,15 +25,15 @@
                     
                  <h:panelGrid  columns="2"  cellpadding="15" width="100%">
                    <p:outputLabel  for="button" value="USUARIO:" />
-                   <p:inputText required="true" value="#{registro.usuario.registro}"/>
+                   <p:inputText required="true" value="#{registro.pacinte.usuario}"/>
                    <p:outputLabel for="button" value="CLAVE:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true" value="#{registro.pacinte.clave}" />
                    <p:outputLabel for="button" value="REPITA CLAVE:" />
                    <p:inputText  required="true"/>
                    <p:outputLabel for="button" value="NOMBRES:" />
-                   <p:inputText required="true"/>
+                   <p:inputText required="true" value="#{registro.pacinte.nombres}"/>
                    <p:outputLabel for="button" value="APELLIDOS:" />
-                   <p:inputText required="true"/> 
+                   <p:inputText required="true" value="#{registro.pacinte.apellidos}"/> 
                    <p:outputLabel for="console" value="TIPO DE DOCUMENTO :" />
                    <p:selectOneMenu id="console" value="#{registro.console}" style="width:250px">
                          <f:selectItem itemLabel="CEDULA DE CIUDADANIA" itemValue="CEDULA DE CIUDADANIA" />
@@ -42,31 +42,31 @@
                          <f:selectItem itemLabel="CEDULA EXTRANJERA" itemValue="CEDULA EXTRANJERA" />
                      </p:selectOneMenu>    
                    <p:outputLabel for="button" value="NUMERO DE DOCUMENTO:" />
-                   <p:inputText required="true" /> 
+                   <p:inputText required="true" value="#{registro.pacinte.numeroDocumento}" /> 
                  </h:panelGrid>
                     
                  <h:panelGrid  columns="2"  cellpadding="15" width="100%" >
                    <p:outputLabel for="button" value="FECHA NACIMIENTO:" />
                    <p:calendar id="button" value="#{calendarView.date3}" showOn="button" />
                    <p:outputLabel for="button" value="TELEFONO FIJO:" />
-                   <p:inputText required="true"/>
+                   <p:inputText required="true"  value="#{registro.pacinte.telefono}"/>
                    <p:outputLabel for="button" value="TELEFONO CELULAR" />
-                   <p:inputText required="true"/>
+                   <p:inputText required="true" value="#{registro.pacinte.celular}"/>
                    <p:outputLabel for="button" value="DIRECCION:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true" value="#{registro.pacinte.dirrecion}" />
                    <p:outputLabel for="button" value="BARRIO:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true"  value="#{registro.pacinte.barrio}" />
                    <p:outputLabel for="button" value="EMAIL:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true"  value="#{registro.pacinte.email}" />
                    <p:outputLabel for="button" value="EDAD:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true"  value="#{registro.pacinte.edad}"/>
                  </h:panelGrid>
                    
                  <h:panelGrid  columns="2" cellpadding="15" width="100%"> 
                    <p:outputLabel for="button" value="ESTATURA:" />
-                   <p:inputText required="true" />
+                   <p:inputText required="true"  value="#{registro.pacinte.estatura}"/>
                    <p:outputLabel for="button" value="PESO:" />
-                   <p:inputText required="true" />           
+                   <p:inputText required="true"  value="#{registro.pacinte.peso}"/>           
                    <p:outputLabel for="button" value="GENERO:" />
                      <p:selectManyCheckbox id="basic" value="#{checkboxView.selectedConsoles}">
                      <f:selectItem itemLabel="Masculino" itemValue="Masculino" />
